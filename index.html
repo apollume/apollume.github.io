@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apollume – See You Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: radial-gradient(circle at 50% 30%, #1a1a2e, #0a0a10);
+      color: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .logo {
+      font-size: 4.5rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ffcc00, #ffe472, #fff5d1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.03); }
+    }
+
+    .tagline {
+      font-size: 1.4rem;
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+      max-width: 700px;
+      color: #ccc;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .tagline span {
+      color: #ffe472;
+      font-weight: 400;
+    }
+
+    .soon {
+      font-size: 0.95rem;
+      opacity: 0.6;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .aura {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(255,210,79,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      animation: auraPulse 6s infinite ease-in-out;
+    }
+
+    @keyframes auraPulse {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -50%) scale(1.1); }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.75rem;
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="aura"></div>
+
+  <div class="logo">APOLLUME</div>
+  <div class="tagline">
+    A new light is rising. <br>
+    Intelligence will never look the same again.
+    <br><br>
+    <span>Morocco’s first AI lab. Built for the future.</span>
+  </div>
+
+  <div class="soon">Launching soon</div>
+
+  <footer>© 2025 Apollume – The Illuminate of Intelligence</footer>
+</body>
+</html>
