@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Apollume AI Lab - Morocco's Premier AI Laboratory</title>
+  <meta name="description" content="Apollume AI Lab — Morocco's first AI laboratory. We craft human-centered AI systems that illuminate the future with ethical, impactful innovation.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -19,6 +20,12 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    /* Layout helpers */
+    :root {
+      --container-max: 1200px;
+      --radius-md: 12px;
     }
 
     :root {
@@ -90,7 +97,7 @@
     }
 
     h2 {
-      font-size: 2.8rem;
+      font-size: clamp(1.6rem, 3.2vw, 2.6rem);
       text-align: center;
       margin-bottom: var(--spacing-lg);
       position: relative;
@@ -148,9 +155,10 @@
 
     .logo-small {
       font-family: var(--font-heading);
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       font-weight: 700;
       color: var(--color-accent-gold);
+      letter-spacing: 0.04em;
     }
 
     .main-nav ul {
@@ -169,8 +177,25 @@
       color: var(--color-accent-gold);
     }
 
+    .main-nav a.active {
+      color: var(--color-accent-gold);
+      text-shadow: 0 0 8px rgba(255, 204, 0, 0.35);
+    }
+
+    /* Mobile menu toggle */
+    .menu-toggle {
+      display: none;
+      background: rgba(255, 204, 0, 0.08);
+      border: 1px solid rgba(255, 204, 0, 0.35);
+      color: var(--color-text-primary);
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+
     main {
-      max-width: 1200px;
+      max-width: var(--container-max);
       margin: 0 auto;
       padding: 0 var(--spacing-md);
       position: relative;
@@ -196,6 +221,16 @@
       align-items: center;
     }
 
+    /* Dim particles behind hero text for clarity */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 45%, rgba(10,10,16,0.70) 0%, rgba(10,10,16,0.55) 32%, rgba(10,10,16,0.25) 55%, transparent 70%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
     .hero-content {
       position: relative;
       z-index: 2; /* Ensure text is above particle animation */
@@ -205,14 +240,15 @@
     /* Logo & Tagline */
     .logo {
       font-family: var(--font-heading);
-      font-size: 5.5rem;
+      font-size: clamp(2.6rem, 8vw, 5rem);
       font-weight: 700;
       background: linear-gradient(90deg, var(--color-accent-gold), var(--color-accent-gold-light), var(--color-accent-gold-pale));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: var(--spacing-sm);
       letter-spacing: 0.05em;
-      animation: pulse 4s ease-in-out infinite;
+      /* Remove pulse for minimalism */
+      animation: none;
       text-shadow: 0 0 30px rgba(255, 204, 0, 0.3);
     }
 
@@ -223,7 +259,7 @@
 
     .tagline {
       font-family: var(--font-body);
-      font-size: 1.6rem;
+      font-size: clamp(1.05rem, 2.2vw, 1.4rem);
       max-width: 750px;
       margin: 0 auto var(--spacing-lg);
       color: var(--color-text-primary);
@@ -251,7 +287,7 @@
       font-weight: 700;
       font-family: var(--font-body);
       border-radius: 50px;
-      font-size: 1.1rem;
+      font-size: 1rem;
       transition: all 0.3s ease;
       margin-top: var(--spacing-md);
       letter-spacing: 0.05em;
@@ -295,13 +331,44 @@
     /* Contact Section */
     .contact {
       text-align: center;
-      background: rgba(0, 0, 0, 0.2);
+      background: linear-gradient(180deg, rgba(0,0,0,0.20), rgba(0,0,0,0.35));
       padding: var(--spacing-lg);
-      border-radius: 15px;
+      border-radius: var(--radius-md);
       margin: var(--spacing-lg) 0;
       width: 100%;
       border: 1px solid rgba(255, 204, 0, 0.1);
     }
+
+    /* Team Section */
+    .team { text-align: center; width: 100%; }
+    .team-intro { max-width: 720px; margin: 0 auto var(--spacing-lg); color: var(--color-text-secondary); }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(220px, 1fr));
+      gap: var(--spacing-md);
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .member-card {
+      background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.28));
+      border: 1px solid rgba(255, 204, 0, 0.12);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-md);
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .member-card:hover { transform: translateY(-4px); border-color: rgba(255, 204, 0, 0.26); box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
+    .avatar {
+      width: 88px; height: 88px; border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, var(--color-accent-gold-light), var(--color-accent-gold));
+      color: #1a1a2e; font-weight: 800; font-family: var(--font-heading);
+      display: grid; place-items: center; letter-spacing: 0.04em;
+      box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.25), 0 10px 30px rgba(0,0,0,0.35);
+      margin-bottom: var(--spacing-sm);
+    }
+    .member-name { margin-top: var(--spacing-xs); color: var(--color-accent-gold-light); font-family: var(--font-heading); font-size: 1.2rem; }
+    .member-meta { font-size: 0.95rem; color: var(--color-text-secondary); opacity: 0.9; }
 
     .contact h2 {
       margin-bottom: var(--spacing-sm);
@@ -319,9 +386,9 @@
     .contact-form textarea {
       padding: 0.8rem 1rem;
       border: 1px solid rgba(255, 204, 0, 0.3);
-      background-color: rgba(26, 26, 46, 0.7);
+      background-color: rgba(26, 26, 46, 0.6);
       color: var(--color-text-primary);
-      border-radius: 4px;
+      border-radius: 10px;
       font-family: var(--font-body);
       font-size: 1rem;
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -353,13 +420,29 @@
     .site-footer {
       text-align: center;
       padding: var(--spacing-md);
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.25);
       margin-top: var(--spacing-lg);
       font-size: 0.85rem;
       color: var(--color-text-secondary);
       position: relative;
       z-index: 1;
     }
+
+    /* Scroll cue */
+    .scroll-cue {
+      position: absolute;
+      bottom: 8vh;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+      opacity: 0.8;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .scroll-cue .chevron { width: 12px; height: 12px; border-right: 2px solid var(--color-accent-gold); border-bottom: 2px solid var(--color-accent-gold); transform: rotate(45deg); animation: bob 1.8s ease-in-out infinite; }
+    @keyframes bob { 0%,100% { transform: translateY(0) rotate(45deg);} 50% { transform: translateY(6px) rotate(45deg);} }
 
     /* Animation classes */
     .will-animate {
@@ -379,7 +462,7 @@
         cursor: none;
       }
       
-      .custom-cursor {
+    .custom-cursor {
         position: fixed;
         width: 20px;
         height: 20px;
@@ -390,6 +473,7 @@
         z-index: 9999;
         transform: translate(-50%, -50%);
         transition: width 0.2s, height 0.2s, background-color 0.2s;
+        display: none; /* Hidden for a cleaner look */
       }
       
       .custom-cursor-follower {
@@ -402,6 +486,7 @@
         z-index: 9998;
         transform: translate(-50%, -50%);
         transition: width 0.3s, height 0.3s, border-color 0.3s, transform 0.1s;
+        display: none; /* Hidden for a cleaner look */
       }
       
       a:hover ~ .custom-cursor,
@@ -444,16 +529,17 @@
       }
 
       .site-header {
-        padding: var(--spacing-sm);
+        padding: var(--spacing-sm) var(--spacing-md);
       }
 
       .logo-small {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
 
-      .main-nav ul {
-        gap: var(--spacing-sm);
-      }
+      .menu-toggle { display: inline-block; }
+      .main-nav { position: absolute; top: 60px; right: var(--spacing-md); background: rgba(10,10,16,0.9); border: 1px solid rgba(255, 204, 0, 0.15); border-radius: 10px; padding: var(--spacing-sm); display: none; }
+      .main-nav.open { display: block; }
+      .main-nav ul { flex-direction: column; gap: var(--spacing-sm); }
 
       .logo {
         font-size: 3.5rem;
@@ -479,6 +565,8 @@
       #particle-container {
         height: 100vh;
       }
+
+      .team-grid { grid-template-columns: 1fr; }
     }
 
     @media (min-width: 768px) and (max-width: 1023px) {
@@ -593,16 +681,19 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#philosophy" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
   <!-- Background Elements -->
   <div class="background-gradient"></div>
   <div id="particle-container"></div>
   
   <!-- Header -->
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="logo-small">Apollume</div>
-    <nav class="main-nav">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">Menu</button>
+    <nav class="main-nav" aria-label="Primary">
       <ul>
         <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#team">Team</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -617,6 +708,7 @@
         <p class="tagline">Morocco's First AI Lab<span>Illuminating the future through artificial intelligence</span></p>
         <a href="#contact" class="cta-button">Connect with us</a>
       </div>
+      
     </section>
 
     <!-- Philosophy Section -->
@@ -628,15 +720,36 @@
       </div>
     </section>
 
+    <!-- Team Section -->
+    <section id="team" class="team" role="region" aria-label="Apollume Team">
+      <h2>Our Team</h2>
+      <p class="team-intro will-animate">Meet the people illuminating Apollume AI Lab.</p>
+      <div class="team-grid will-animate">
+        <article class="member-card" aria-label="Team member: Zakariae Mrabet">
+          <div class="avatar" aria-hidden="true">ZM</div>
+          <h3 class="member-name">Zakariae Mrabet</h3>
+          <p class="member-meta">Apollume AI Lab</p>
+        </article>
+        <article class="member-card" aria-label="Team member: Ghita Ait Haddou">
+          <div class="avatar" aria-hidden="true">GA</div>
+          <h3 class="member-name">Ghita Ait Haddou</h3>
+          <p class="member-meta">Apollume AI Lab</p>
+        </article>
+      </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
       <h2>Connect with the Light</h2>
       <div class="will-animate">
         <p>Ready to illuminate your business with the power of AI? Reach out to discuss how Apollume AI Lab can transform your vision into reality.</p>
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <textarea placeholder="Tell us about your project or inquiry" required></textarea>
+        <form class="contact-form" aria-label="Contact form">
+          <label class="sr-only" for="name">Your Name</label>
+          <input id="name" name="name" type="text" placeholder="Your Name" required>
+          <label class="sr-only" for="email">Your Email</label>
+          <input id="email" name="email" type="email" placeholder="Your Email" required>
+          <label class="sr-only" for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your project or inquiry" required></textarea>
           <button type="submit" class="cta-button">Send Message</button>
         </form>
       </div>
@@ -656,6 +769,30 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      // Mobile menu toggle
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.main-nav');
+      toggle?.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      // Scroll spy for nav
+      const links = document.querySelectorAll('.main-nav a');
+      const sections = [...links].map(a => document.querySelector(a.getAttribute('href')));
+      const setActive = () => {
+        const pos = window.scrollY + window.innerHeight * 0.35;
+        sections.forEach((sec, i) => {
+          if (!sec) return;
+          const top = sec.offsetTop;
+          const bottom = top + sec.offsetHeight;
+          const active = pos >= top && pos < bottom;
+          links[i].classList.toggle('active', active);
+        });
+      };
+      setActive();
+      window.addEventListener('scroll', setActive);
+
       // Animation for elements as they scroll into view
       const animateElements = () => {
         const elements = document.querySelectorAll('.will-animate');
@@ -675,24 +812,9 @@
       // Check on scroll
       window.addEventListener('scroll', animateElements);
       
-      // Custom cursor for desktop
-      if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-        const cursor = document.querySelector('.custom-cursor');
-        const cursorFollower = document.querySelector('.custom-cursor-follower');
-        
-        document.addEventListener('mousemove', (e) => {
-          cursor.style.left = e.clientX + 'px';
-          cursor.style.top = e.clientY + 'px';
-          
-          // Follower with slight delay
-          setTimeout(() => {
-            cursorFollower.style.left = e.clientX + 'px';
-            cursorFollower.style.top = e.clientY + 'px';
-          }, 50);
-        });
-      }
+      // Custom cursor disabled for a cleaner experience
       
-      // Particle System Setup
+      // Particle System Setup (optimized for mobile and tab visibility)
       try {
         // Scene setup
         const scene = new THREE.Scene();
@@ -708,8 +830,10 @@
         renderer.setPixelRatio(window.devicePixelRatio);
         document.getElementById('particle-container').appendChild(renderer.domElement);
         
-        // Particles
-        const particleCount = 2000;
+        // Particles (reduced for minimal, clear hero)
+        const isMobile = window.matchMedia('(max-width: 767px)').matches;
+        const isTablet = window.matchMedia('(min-width: 768px) and (max-width: 1023px)').matches;
+        const particleCount = isMobile ? 220 : isTablet ? 380 : 550;
         const particles = new THREE.BufferGeometry();
         const positions = new Float32Array(particleCount * 3);
         const colors = new Float32Array(particleCount * 3);
@@ -718,10 +842,10 @@
         const color = new THREE.Color();
         
         for (let i = 0; i < particleCount; i++) {
-          // Position
-          const x = (Math.random() - 0.5) * 50;
-          const y = (Math.random() - 0.5) * 50;
-          const z = (Math.random() - 0.5) * 50;
+          // Position — keep particles away from camera to avoid giant dots
+          const x = (Math.random() - 0.5) * 70;   // wider spread
+          const y = (Math.random() - 0.5) * 70;
+          const z = -20 - Math.random() * 50;     // push back into scene [-70, -20]
           
           positions[i * 3] = x;
           positions[i * 3 + 1] = y;
@@ -735,8 +859,8 @@
           colors[i * 3 + 1] = color.g;
           colors[i * 3 + 2] = color.b;
           
-          // Size variation
-          sizes[i] = Math.random() * 2 + 0.5;
+          // Size variation — smaller, calmer
+          sizes[i] = Math.random() * 1.2 + 0.4;
         }
         
         particles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
@@ -752,7 +876,7 @@
             void main() {
               vColor = color;
               vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
-              gl_PointSize = size * (300.0 / -mvPosition.z);
+              gl_PointSize = size * (180.0 / -mvPosition.z);
               gl_Position = projectionMatrix * mvPosition;
             }
           `,
@@ -764,7 +888,7 @@
               if (dist > 0.5) discard;
               
               float alpha = 1.0 - smoothstep(0.3, 0.5, dist);
-              gl_FragColor = vec4(vColor, alpha * 0.7);
+              gl_FragColor = vec4(vColor, alpha * 0.45);
             }
           `,
           transparent: true,
@@ -775,6 +899,40 @@
         
         const particleSystem = new THREE.Points(particles, particleMaterial);
         scene.add(particleSystem);
+
+        // Extraordinary: Golden Halo around the hero title
+        const haloGroup = new THREE.Group();
+        const makeRing = (radius, axis, opacity) => {
+          const segments = 256;
+          const ringGeo = new THREE.BufferGeometry();
+          const pos = new Float32Array(segments * 3);
+          for (let i = 0; i < segments; i++) {
+            const t = (i / segments) * Math.PI * 2;
+            const x = Math.cos(t) * radius;
+            const y = Math.sin(t) * radius;
+            if (axis === 'xy') { pos[i*3] = x; pos[i*3+1] = y; pos[i*3+2] = 0; }
+            if (axis === 'xz') { pos[i*3] = x; pos[i*3+1] = 0; pos[i*3+2] = y; }
+            if (axis === 'yz') { pos[i*3] = 0; pos[i*3+1] = x; pos[i*3+2] = y; }
+          }
+          ringGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+          const mat = new THREE.LineBasicMaterial({ color: 0xffcc00, transparent: true, opacity, linewidth: 1 });
+          return new THREE.LineLoop(ringGeo, mat);
+        };
+        const ring1 = makeRing(10, 'xy', 0.22);
+        const ring2 = makeRing(12, 'xz', 0.12);
+        const ring3 = makeRing(14, 'yz', 0.08);
+        haloGroup.add(ring1, ring2, ring3);
+        haloGroup.position.set(0, 0, -30);
+        scene.add(haloGroup);
+
+        // Extraordinary: Constellation lines that connect nearby particles (center region only)
+        const maxSegments = 600;
+        const lineGeo = new THREE.BufferGeometry();
+        const linePositions = new Float32Array(maxSegments * 6);
+        lineGeo.setAttribute('position', new THREE.BufferAttribute(linePositions, 3));
+        const lineMat = new THREE.LineBasicMaterial({ color: 0xffe472, transparent: true, opacity: 0.12 });
+        const connections = new THREE.LineSegments(lineGeo, lineMat);
+        scene.add(connections);
         
         // Mouse interaction
         let mouseX = 0, mouseY = 0;
@@ -787,9 +945,11 @@
           mouseY = (event.clientY - windowHalfY) / 100;
         });
         
-        // Animation loop
+        // Animation loop (calmer motion)
+        let running = true;
         const animate = () => {
           requestAnimationFrame(animate);
+          if (!running) return;
           
           // Smooth camera movement
           targetX = mouseX * 0.2;
@@ -798,9 +958,13 @@
           camera.position.y += (targetY - camera.position.y) * 0.05;
           camera.lookAt(scene.position);
           
-          // Rotate particle system
-          particleSystem.rotation.y += 0.001;
-          particleSystem.rotation.x += 0.0005;
+          // Subtle rotation
+          particleSystem.rotation.y += 0.0004;
+          particleSystem.rotation.x += 0.0002;
+
+          // Halo gentle precession
+          haloGroup.rotation.x += 0.00025;
+          haloGroup.rotation.y -= 0.00035;
           
           // Update particle positions for flowing effect
           const positions = particles.attributes.position.array;
@@ -811,21 +975,50 @@
             const iy = i * 3 + 1;
             const iz = i * 3 + 2;
             
-            // Apply sine wave motion
-            positions[iy] += Math.sin((positions[ix] + time) * 0.5) * 0.01;
-            positions[ix] += Math.cos((positions[iy] + time) * 0.5) * 0.01;
-            positions[iz] += Math.sin((positions[ix] + time) * 0.3) * 0.01;
+            // Apply gentle sine wave motion
+            positions[iy] += Math.sin((positions[ix] + time) * 0.45) * 0.004;
+            positions[ix] += Math.cos((positions[iy] + time) * 0.45) * 0.004;
+            // keep z largely stable for depth consistency
+            positions[iz] += Math.sin((positions[ix] + time) * 0.25) * 0.002;
             
             // Boundary check - wrap particles if they go too far
-            if (positions[ix] > 25) positions[ix] = -25;
-            if (positions[ix] < -25) positions[ix] = 25;
-            if (positions[iy] > 25) positions[iy] = -25;
-            if (positions[iy] < -25) positions[iy] = 25;
-            if (positions[iz] > 25) positions[iz] = -25;
-            if (positions[iz] < -25) positions[iz] = 25;
+            if (positions[ix] > 45) positions[ix] = -45;
+            if (positions[ix] < -45) positions[ix] = 45;
+            if (positions[iy] > 45) positions[iy] = -45;
+            if (positions[iy] < -45) positions[iy] = 45;
+            if (positions[iz] > -20) positions[iz] = -70;
+            if (positions[iz] < -70) positions[iz] = -20;
           }
           
           particles.attributes.position.needsUpdate = true;
+
+          // Update constellation connections every frame (very light limits)
+          let ptr = 0;
+          const threshold = 6.0; // max distance to connect
+          const limit = 400; // cap total connections
+          const countCheck = Math.min(particleCount, 260);
+          for (let i = 0; i < countCheck; i++) {
+            const ax = positions[i*3];
+            const ay = positions[i*3+1];
+            const az = positions[i*3+2];
+            // Only connect near scene center to avoid clutter
+            if (Math.abs(ax) > 20 || Math.abs(ay) > 20 || az < -60) continue;
+            for (let j = i+1; j < countCheck; j++) {
+              const bx = positions[j*3];
+              const by = positions[j*3+1];
+              const bz = positions[j*3+2];
+              const dx = ax - bx, dy = ay - by, dz = az - bz;
+              const d2 = dx*dx + dy*dy + dz*dz;
+              if (d2 < threshold*threshold) {
+                linePositions[ptr++] = ax; linePositions[ptr++] = ay; linePositions[ptr++] = az;
+                linePositions[ptr++] = bx; linePositions[ptr++] = by; linePositions[ptr++] = bz;
+                if (ptr >= limit * 6) break;
+              }
+            }
+            if (ptr >= limit * 6) break;
+          }
+          connections.geometry.setDrawRange(0, ptr/3);
+          connections.geometry.attributes.position.needsUpdate = true;
           
           renderer.render(scene, camera);
         };
@@ -837,9 +1030,14 @@
           renderer.setSize(window.innerWidth, window.innerHeight);
         });
         
+        // Pause when tab not visible to save resources
+        document.addEventListener('visibilitychange', () => {
+          running = !document.hidden;
+        });
+
         // Start animation
         animate();
-        
+
       } catch (err) {
         console.error("WebGL initialization failed:", err);
         // Show fallback visual
@@ -850,5 +1048,9 @@
       }
     });
   </script>
+  <style>
+    /* Visually hidden utility for labels */
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  </style>
 </body>
 </html>
