@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Apollume LLC</title>
+  <meta name="description" content="Privacy Policy for Apollume LLC — Morocco's Premier AI Laboratory.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://apollume.com/privacy-policy">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg-dark: #04040c;
+      --color-accent-gold: #c9a84c;
+      --color-accent-gold-light: #dfc06a;
+      --color-accent-gold-pale: #f0e0b0;
+      --color-text-primary: #ede8df;
+      --color-text-secondary: #8a8278;
+      --font-heading: 'Cinzel', serif;
+      --font-body: 'Cormorant Garamond', Georgia, serif;
+      --container-max: 800px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text-primary);
+      background: var(--color-bg-dark);
+      min-height: 100vh;
+      line-height: 1.8;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(80,40,10,0.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 50% 40%, rgba(30,15,60,0.55) 0%, transparent 65%),
+        #05050d;
+      pointer-events: none;
+    }
+    /* Header */
+    .site-header {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      background: rgba(5,5,13,0.88);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      z-index: 10;
+    }
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,204,0,0.6) 40%, rgba(167,139,250,0.35) 70%, transparent);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .logo-small {
+      display: flex; align-items: center; gap: 0.75rem;
+      text-decoration: none; color: inherit;
+    }
+    .logo-icon {
+      color: var(--color-accent-gold);
+      font-size: 1.1rem;
+    }
+    .logo-name {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-accent-gold-light);
+      letter-spacing: 0.08em;
+    }
+    .logo-sub {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      color: var(--color-text-secondary);
+      letter-spacing: 0.1em;
+    }
+    .logo-wordmark { display: flex; flex-direction: column; line-height: 1; gap: 3px; }
+    .back-home {
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      color: var(--color-accent-gold);
+      text-decoration: none;
+      border: 1px solid rgba(201,168,76,0.35);
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .back-home:hover { background: var(--color-accent-gold); color: #0a0a10; }
+
+    /* Content */
+    .policy-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 120px 2rem 6rem;
+    }
+    .policy-label {
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      color: var(--color-text-secondary);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--color-accent-gold-light);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .policy-date {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+      font-style: italic;
+      margin-bottom: 3rem;
+      display: block;
+    }
+    .divider {
+      width: 60px; height: 1px;
+      background: linear-gradient(90deg, var(--color-accent-gold), transparent);
+      margin: 2.5rem 0;
+    }
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      color: var(--color-accent-gold);
+      font-weight: 700;
+      margin: 2.5rem 0 0.75rem;
+      letter-spacing: 0.05em;
+    }
+    p {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      color: var(--color-text-secondary);
+      line-height: 1.9;
+      margin-bottom: 1.2rem;
+      font-weight: 300;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.2rem;
+    }
+    ul li {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      color: var(--color-text-secondary);
+      line-height: 1.9;
+      font-weight: 300;
+      padding-left: 1.4rem;
+      position: relative;
+      margin-bottom: 0.4rem;
+    }
+    ul li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: var(--color-accent-gold);
+      font-size: 0.45rem;
+      top: 0.65em;
+    }
+    a { color: var(--color-accent-gold-light); text-decoration: none; }
+    a:hover { color: var(--color-accent-gold-pale); }
+
+    /* Footer */
+    .site-footer {
+      position: relative; z-index: 1;
+      border-top: 1px solid rgba(255,204,0,0.1);
+      padding: 2rem;
+      text-align: center;
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      color: var(--color-text-secondary);
+    }
+    .footer-policy-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .footer-policy-links a { color: var(--color-text-secondary); transition: color 0.2s; }
+    .footer-policy-links a:hover { color: var(--color-accent-gold); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo-small" aria-label="Apollume home">
+        <span class="logo-icon" aria-hidden="true">◆</span>
+        <span class="logo-wordmark">
+          <span class="logo-name">Apollume</span>
+          <span class="logo-sub">AI Laboratory</span>
+        </span>
+      </a>
+      <a href="/" class="back-home">← Back to Home</a>
+    </div>
+  </header>
+
+  <div class="policy-wrap">
+    <span class="policy-label">Legal</span>
+    <h1>Privacy Policy</h1>
+    <span class="policy-date">Effective Date: April 4, 2026 &nbsp;·&nbsp; Last Updated: April 4, 2026</span>
+    <div class="divider"></div>
+
+    <p>Apollume LLC ("Apollume," "we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website at <a href="https://apollume.com">apollume.com</a>. By using our website, you acknowledge that you have read and understood this Privacy Policy.</p>
+
+    <h2>1. Data Controller</h2>
+    <p>The data controller responsible for your personal information is:</p>
+    <ul>
+      <li><strong>Company:</strong> Apollume LLC</li>
+      <li><strong>Registered Country:</strong> Kingdom of Morocco</li>
+      <li><strong>Business Activity:</strong> Artificial Intelligence Research &amp; Engineering</li>
+      <li><strong>Email:</strong> <a href="mailto:contact@apollume.com">contact@apollume.com</a></li>
+      <li><strong>Website:</strong> <a href="https://apollume.com">apollume.com</a></li>
+    </ul>
+
+    <h2>2. Information We Collect</h2>
+    <p>We may collect the following categories of personal data:</p>
+    <ul>
+      <li><strong>Identity Data:</strong> First name, last name, or username provided when contacting us.</li>
+      <li><strong>Contact Data:</strong> Email address and any other contact details you voluntarily provide.</li>
+      <li><strong>Message Content:</strong> The content of messages you send us via our contact form or email.</li>
+      <li><strong>Technical Data:</strong> IP address, browser type and version, time zone setting, browser plug-in types, operating system and platform, and other technology identifiers on the devices you use to access our website.</li>
+      <li><strong>Usage Data:</strong> Information about how you use our website, including pages visited, time spent, and referring URLs.</li>
+    </ul>
+    <p>We do not collect special category or sensitive personal data (such as health information, financial account details, biometric data, or government identification numbers).</p>
+
+    <h2>3. Legal Basis for Processing</h2>
+    <p>We process your personal data on the following legal grounds:</p>
+    <ul>
+      <li><strong>Legitimate Interests:</strong> To operate, maintain, and improve our website and business communications, where our interests are not overridden by your rights.</li>
+      <li><strong>Contract Performance:</strong> To respond to your inquiries and provide services you have requested.</li>
+      <li><strong>Legal Obligation:</strong> To comply with applicable laws and regulations, including Moroccan Law No. 09-08 on the Protection of Personal Data.</li>
+      <li><strong>Consent:</strong> Where you have given explicit consent for a specific processing activity, which you may withdraw at any time.</li>
+    </ul>
+
+    <h2>4. How We Use Your Information</h2>
+    <p>We use the information we collect to:</p>
+    <ul>
+      <li>Respond to your inquiries and communicate with you about our services.</li>
+      <li>Manage and improve our website and user experience.</li>
+      <li>Analyze website traffic and usage patterns using anonymized or aggregated data.</li>
+      <li>Comply with applicable legal and regulatory obligations.</li>
+      <li>Protect the security, integrity, and lawful operation of our website and business.</li>
+      <li>Prevent fraud and other unlawful activities.</li>
+    </ul>
+    <p>We do not sell, rent, or trade your personal information to third parties for their own marketing purposes.</p>
+
+    <h2>5. Cookies and Tracking Technologies</h2>
+    <p>Our website may use cookies and similar tracking technologies (such as web beacons and pixels) to enhance your browsing experience and gather usage analytics. Please see our <a href="/cookie-policy">Cookie Policy</a> for detailed information on the types of cookies we use, their purpose, and how you can control or disable them.</p>
+
+    <h2>6. Data Sharing and Disclosure</h2>
+    <p>We do not sell your personal data. We may share your information only in the following limited circumstances:</p>
+    <ul>
+      <li><strong>Service Providers:</strong> Trusted third-party vendors who assist us in operating our website, hosting, analytics, or conducting our business. These parties are contractually bound to maintain the confidentiality and security of your data and may not use it for their own purposes.</li>
+      <li><strong>Legal Requirements:</strong> When required by applicable law, court order, or governmental authority, or to protect our rights, property, or safety, or that of others.</li>
+      <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, reorganization, or sale of all or a portion of our assets, your data may be transferred. We will notify you via email or a prominent notice on our website before your data becomes subject to a different privacy policy.</li>
+      <li><strong>With Your Consent:</strong> For any other purpose disclosed to you at the time of collection, with your prior explicit consent.</li>
+    </ul>
+
+    <h2>7. International Data Transfers</h2>
+    <p>As an AI laboratory based in Morocco, we may use service providers (such as cloud hosting or analytics platforms) whose servers are located outside Morocco, including in the European Union or the United States. When we transfer personal data internationally, we ensure that adequate safeguards are in place in accordance with applicable data protection law, including standard contractual clauses or equivalent mechanisms. By using our website, you acknowledge that your data may be transferred to and processed in countries outside your country of residence.</p>
+
+    <h2>8. Data Retention</h2>
+    <p>We retain your personal information only for as long as necessary to fulfill the purposes for which it was collected, or as required by applicable law. Specifically:</p>
+    <ul>
+      <li>Contact form submissions and correspondence are retained for up to 24 months from the date of last contact, unless you request earlier deletion.</li>
+      <li>Technical and usage data may be retained in anonymized or aggregated form indefinitely for analytics purposes.</li>
+      <li>Data retained to comply with legal obligations is kept for the period required by law.</li>
+    </ul>
+
+    <h2>9. Your Rights</h2>
+    <p>Depending on your jurisdiction, you may have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Right of Access:</strong> Request a copy of the personal information we hold about you.</li>
+      <li><strong>Right to Rectification:</strong> Request correction of inaccurate or incomplete data.</li>
+      <li><strong>Right to Erasure:</strong> Request deletion of your personal information ("right to be forgotten"), subject to legal obligations.</li>
+      <li><strong>Right to Restriction:</strong> Request that we restrict the processing of your data in certain circumstances.</li>
+      <li><strong>Right to Data Portability:</strong> Receive your data in a structured, machine-readable format where processing is automated and based on consent or contract.</li>
+      <li><strong>Right to Object:</strong> Object to processing based on legitimate interests or for direct marketing purposes.</li>
+      <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time where processing is based on consent, without affecting the lawfulness of prior processing.</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us at <a href="mailto:contact@apollume.com">contact@apollume.com</a>. We will respond within 30 days. We may need to verify your identity before processing your request.</p>
+
+    <h2>10. Data Security</h2>
+    <p>We implement appropriate administrative, technical, and physical security measures to protect your personal information against unauthorized access, disclosure, alteration, loss, or destruction. Access to personal data is restricted to authorized personnel on a need-to-know basis. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+    <h2>11. Third-Party Links</h2>
+    <p>Our website may contain links to third-party websites, plugins, or services. Clicking on those links may allow third parties to collect or share data about you. We do not control these third-party websites and are not responsible for their privacy practices. We encourage you to review the privacy policy of every website you visit.</p>
+
+    <h2>12. Children's Privacy</h2>
+    <p>Our website is not directed to individuals under the age of 16. We do not knowingly collect personal information from children under 16. If you believe we have inadvertently collected such information, please contact us immediately at <a href="mailto:contact@apollume.com">contact@apollume.com</a> and we will promptly delete it.</p>
+
+    <h2>13. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technologies, or legal requirements. We will notify you of material changes by posting the updated policy on this page with a revised effective date. We encourage you to review this page periodically. Your continued use of the website after any changes constitutes your acceptance of the updated policy.</p>
+
+    <h2>14. Governing Law</h2>
+    <p>This Privacy Policy is governed by the laws of the Kingdom of Morocco, including Law No. 09-08 on the Protection of Individuals with Regard to the Processing of Personal Data. Any disputes arising from this policy shall be subject to the exclusive jurisdiction of the competent courts of Morocco.</p>
+
+    <h2>15. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data processing practices, please contact our designated privacy contact:</p>
+    <ul>
+      <li><strong>Apollume LLC</strong></li>
+      <li>Kingdom of Morocco</li>
+      <li>Email: <a href="mailto:contact@apollume.com">contact@apollume.com</a></li>
+      <li>Website: <a href="https://apollume.com">apollume.com</a></li>
+    </ul>
+    <p>We aim to respond to all legitimate privacy-related requests within 30 calendar days.</p>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-policy-links">
+      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/terms-of-service">Terms of Service</a>
+      <a href="/cookie-policy">Cookie Policy</a>
+    </div>
+    <span>&copy; <span id="year"></span> Apollume LLC. All rights reserved.</span>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

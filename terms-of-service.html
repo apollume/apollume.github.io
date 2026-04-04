@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Apollume LLC</title>
+  <meta name="description" content="Terms of Service for Apollume LLC — Morocco's Premier AI Laboratory.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://apollume.com/terms-of-service">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg-dark: #04040c;
+      --color-accent-gold: #c9a84c;
+      --color-accent-gold-light: #dfc06a;
+      --color-accent-gold-pale: #f0e0b0;
+      --color-text-primary: #ede8df;
+      --color-text-secondary: #8a8278;
+      --font-heading: 'Cinzel', serif;
+      --font-body: 'Cormorant Garamond', Georgia, serif;
+      --container-max: 800px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text-primary);
+      background: var(--color-bg-dark);
+      min-height: 100vh;
+      line-height: 1.8;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(80,40,10,0.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 50% 40%, rgba(30,15,60,0.55) 0%, transparent 65%),
+        #05050d;
+      pointer-events: none;
+    }
+    .site-header {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      background: rgba(5,5,13,0.88);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      z-index: 10;
+    }
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,204,0,0.6) 40%, rgba(167,139,250,0.35) 70%, transparent);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .logo-small { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: inherit; }
+    .logo-icon { color: var(--color-accent-gold); font-size: 1.1rem; }
+    .logo-name { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--color-accent-gold-light); letter-spacing: 0.08em; }
+    .logo-sub { font-family: var(--font-body); font-size: 0.7rem; color: var(--color-text-secondary); letter-spacing: 0.1em; }
+    .logo-wordmark { display: flex; flex-direction: column; line-height: 1; gap: 3px; }
+    .back-home {
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      color: var(--color-accent-gold);
+      text-decoration: none;
+      border: 1px solid rgba(201,168,76,0.35);
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .back-home:hover { background: var(--color-accent-gold); color: #0a0a10; }
+    .policy-wrap {
+      position: relative; z-index: 1;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 120px 2rem 6rem;
+    }
+    .policy-label {
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      color: var(--color-text-secondary);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 1rem;
+    }
+    h1 { font-family: var(--font-heading); font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--color-accent-gold-light); font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; }
+    .policy-date { font-family: var(--font-body); font-size: 0.9rem; color: var(--color-text-secondary); font-style: italic; margin-bottom: 3rem; display: block; }
+    .divider { width: 60px; height: 1px; background: linear-gradient(90deg, var(--color-accent-gold), transparent); margin: 2.5rem 0; }
+    h2 { font-family: var(--font-heading); font-size: 1.15rem; color: var(--color-accent-gold); font-weight: 700; margin: 2.5rem 0 0.75rem; letter-spacing: 0.05em; }
+    p { font-family: var(--font-body); font-size: 1.05rem; color: var(--color-text-secondary); line-height: 1.9; margin-bottom: 1.2rem; font-weight: 300; }
+    ul { list-style: none; padding: 0; margin-bottom: 1.2rem; }
+    ul li { font-family: var(--font-body); font-size: 1.05rem; color: var(--color-text-secondary); line-height: 1.9; font-weight: 300; padding-left: 1.4rem; position: relative; margin-bottom: 0.4rem; }
+    ul li::before { content: '◆'; position: absolute; left: 0; color: var(--color-accent-gold); font-size: 0.45rem; top: 0.65em; }
+    a { color: var(--color-accent-gold-light); text-decoration: none; }
+    a:hover { color: var(--color-accent-gold-pale); }
+    .site-footer { position: relative; z-index: 1; border-top: 1px solid rgba(255,204,0,0.1); padding: 2rem; text-align: center; font-family: var(--font-heading); font-size: 0.75rem; letter-spacing: 0.08em; color: var(--color-text-secondary); }
+    .footer-policy-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .footer-policy-links a { color: var(--color-text-secondary); transition: color 0.2s; }
+    .footer-policy-links a:hover { color: var(--color-accent-gold); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo-small" aria-label="Apollume home">
+        <span class="logo-icon" aria-hidden="true">◆</span>
+        <span class="logo-wordmark">
+          <span class="logo-name">Apollume</span>
+          <span class="logo-sub">AI Laboratory</span>
+        </span>
+      </a>
+      <a href="/" class="back-home">← Back to Home</a>
+    </div>
+  </header>
+
+  <div class="policy-wrap">
+    <span class="policy-label">Legal</span>
+    <h1>Terms of Service</h1>
+    <span class="policy-date">Effective Date: April 1, 2026 &nbsp;·&nbsp; Last Updated: April 1, 2026</span>
+    <div class="divider"></div>
+
+    <p>Welcome to Apollume LLC. These Terms of Service ("Terms") govern your access to and use of our website at <a href="https://apollume.com">apollume.com</a> and any services we provide. By accessing or using our website, you agree to be bound by these Terms.</p>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing our website, you confirm that you are at least 16 years of age and have the legal capacity to enter into these Terms. If you are accessing the site on behalf of an organization, you represent that you have the authority to bind that organization to these Terms.</p>
+
+    <h2>2. Description of Services</h2>
+    <p>Apollume LLC is Morocco's first AI laboratory, providing:</p>
+    <ul>
+      <li><strong>AI Engineering:</strong> Custom AI system design, development, and deployment.</li>
+      <li><strong>Research:</strong> Applied and foundational AI research services.</li>
+      <li><strong>Strategic Consulting:</strong> AI strategy and transformation advisory for organizations.</li>
+    </ul>
+    <p>The scope, deliverables, timeline, and pricing of any engagement are governed by a separate written agreement between Apollume LLC and the client.</p>
+
+    <h2>3. Intellectual Property</h2>
+    <p>All content on this website — including text, graphics, logos, design, code, and branding — is the property of Apollume LLC and is protected by applicable intellectual property laws. You may not reproduce, distribute, modify, or create derivative works without our prior written consent.</p>
+    <p>Any AI systems, models, research outputs, or deliverables developed by Apollume LLC remain our intellectual property unless explicitly transferred in writing under a separate agreement.</p>
+
+    <h2>4. Use of the Website</h2>
+    <p>You agree to use our website only for lawful purposes and in a manner that does not:</p>
+    <ul>
+      <li>Infringe on the rights of any third party.</li>
+      <li>Transmit unsolicited or unauthorized advertising or promotional material.</li>
+      <li>Attempt to gain unauthorized access to any part of the website or its infrastructure.</li>
+      <li>Introduce viruses, malware, or other harmful code.</li>
+      <li>Scrape, harvest, or collect data from our website without permission.</li>
+    </ul>
+
+    <h2>5. Contact Form Submissions</h2>
+    <p>When you submit information through our contact form, you grant Apollume LLC permission to use that information solely to respond to your inquiry. We will not use your submission for marketing purposes without your explicit consent.</p>
+
+    <h2>6. Disclaimer of Warranties</h2>
+    <p>Our website and its content are provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. Apollume LLC does not warrant that the website will be error-free, uninterrupted, or free of viruses or other harmful components.</p>
+
+    <h2>7. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by applicable law, Apollume LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or in connection with your use of, or inability to use, our website or services — even if we have been advised of the possibility of such damages.</p>
+
+    <h2>8. Third-Party Links</h2>
+    <p>Our website may contain links to third-party websites. These links are provided for your convenience only. Apollume LLC has no control over the content or practices of those sites and accepts no responsibility for them.</p>
+
+    <h2>9. Privacy</h2>
+    <p>Your use of our website is also governed by our <a href="/privacy-policy">Privacy Policy</a>, which is incorporated into these Terms by reference.</p>
+
+    <h2>10. Governing Law</h2>
+    <p>These Terms are governed by and construed in accordance with the laws of the Kingdom of Morocco, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the competent courts of Morocco.</p>
+
+    <h2>11. Changes to These Terms</h2>
+    <p>We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting to this page. Your continued use of the website following any changes constitutes your acceptance of the revised Terms.</p>
+
+    <h2>12. Contact Us</h2>
+    <p>If you have any questions about these Terms, please contact us:</p>
+    <ul>
+      <li><strong>Apollume LLC</strong></li>
+      <li>Morocco</li>
+      <li>Email: <a href="mailto:contact@apollume.com">contact@apollume.com</a></li>
+      <li>Website: <a href="https://apollume.com">apollume.com</a></li>
+    </ul>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-policy-links">
+      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/terms-of-service">Terms of Service</a>
+      <a href="/cookie-policy">Cookie Policy</a>
+    </div>
+    <span>&copy; <span id="year"></span> Apollume LLC. All rights reserved.</span>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
